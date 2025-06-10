@@ -112,8 +112,6 @@ There's a blue button in the bottom right corner that fills in a test card numbe
 
 ## Notes
 
-This is my first time working with payment forms so the code might not be perfect. I tried to make it secure but I know there are probably better ways to handle sensitive data in real applications.
-
 The styling uses BEM methodology. It makes CSS more organized.
 
 ## Issues
