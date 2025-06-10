@@ -1,0 +1,13 @@
+@use "../../variables/colors" as *;
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    color: $text-secondary;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    margin-bottom: 2.4rem;
+}

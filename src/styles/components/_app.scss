@@ -1,0 +1,11 @@
+@use "../variables/colors" as *;
+
+.app{
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 328px;
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: $white;
+}

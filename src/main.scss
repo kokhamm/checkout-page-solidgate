@@ -1,0 +1,35 @@
+/* Variables and mixins first */
+@use "styles/variables/colors" as *;
+
+/* Base */
+@use "styles/base/reset";
+@use "styles/base/basic";
+
+/* Component App */
+@use "styles/components/app";
+
+/* Component Header */
+@use "styles/components/header/header";
+
+/* Component Payment Block */
+@use "styles/components/body/payment-card/payment-block";
+@use "styles/components/body/payment-card/payment-form";
+@use "styles/components/body/payment-card/apple-pay-btn";
+@use "styles/components/body/payment-card/manual-card";
+@use "styles/components/body/payment-card/start-trial-btn";
+
+/* Card Input Components */
+@use "styles/components/body/payment-card/card-number-input/card-number-input";
+@use "styles/components/body/payment-card/expiration-date-input/expiration-date-input";
+@use "styles/components/body/payment-card/cvc-input/cvc-input";
+
+/* Component Order Info */
+@use "styles/components/body/order-info/order-info";
+
+/* Component Utils */
+@use "styles/components/utils/test-cards-button";
+
+/* Component Footer */
+@use "styles/components/footer/footer";
+
+

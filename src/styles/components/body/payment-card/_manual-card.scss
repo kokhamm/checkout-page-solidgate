@@ -1,0 +1,13 @@
+@use "../../../variables/colors" as *;
+
+.manual-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &__row {
+        display: flex;
+        gap: .8rem;
+        margin-bottom: 1.6rem;
+    }
+}

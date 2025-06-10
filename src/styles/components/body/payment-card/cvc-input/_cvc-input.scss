@@ -1,0 +1,147 @@
+@use "../../../../variables/colors" as *;
+
+.cvc-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+
+    &__label {
+        color: $text-secondary;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.6rem; 
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__body {
+        padding: 1rem 4rem 1rem 1.2rem;
+        border: 1px solid $text-default;
+        border-radius: 0.6rem;
+        background: $white;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.6rem;
+        color: $text-primary;
+        letter-spacing: 0.1rem;
+        transition: border-color 0.2s ease;
+        width: 100%;
+
+        &::placeholder {
+            color: $text-secondary;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2.4rem; 
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $primary;
+        }
+
+        &:hover {
+            border-color: $text-tertiary;
+        }
+
+        &--error {
+            border-color: #FF4757;
+            
+            &:focus {
+                border-color: #FF4757;
+            }
+            
+            &:hover {
+                border-color: #FF4757;
+            }
+        }
+    }
+
+    &__info-btn {
+        position: absolute;
+        right: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__tooltip {
+        position: absolute;
+        top: -8rem;
+        right: 0;
+        background: $white;
+        border: 1px solid $text-default;
+        border-radius: 0.8rem;
+        padding: 1.2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        animation: fadeInUp 0.3s ease-out;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 1.5rem;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid $white;
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            right: 1.5rem;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid $text-default;
+        }
+    }
+
+    &__tooltip-icon {
+        width: 120px;
+        height: auto;
+        display: block;
+    }
+
+    &__error {
+        color: #FF4757;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.6rem;
+        margin-top: 0.4rem;
+        display: block;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

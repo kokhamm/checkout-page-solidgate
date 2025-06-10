@@ -1,0 +1,94 @@
+@use "../../../../variables/colors" as *;
+
+.card-number-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    &__label {
+        color: $text-secondary;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.6rem; 
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__body {
+        padding: 1rem 12rem 1rem 1.2rem;
+        padding-right: 12rem;
+        border: 1px solid $text-default;
+        border-radius: 0.6rem;
+        background: $white;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.6rem;
+        color: $text-primary;
+        letter-spacing: 0.1rem;
+        transition: border-color 0.2s ease;
+        width: 100%;
+        box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.12);
+        &::placeholder {
+            color: $text-secondary;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2.4rem; 
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $text-primary;
+        }
+
+        &:hover {
+            border-color: $text-tertiary;
+        }
+
+        &--error {
+            border-color: #FF4757;
+            
+            &:focus {
+                border-color: #FF4757;
+            }
+            
+            &:hover {
+                border-color: #FF4757;
+            }
+        }
+    }
+
+    &__icons {
+        position: absolute;
+        right: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    &__card-icon {
+        height: 3rem;
+        width: auto;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+
+        &:only-child {
+            opacity: 1;
+        }
+    }
+
+    &__error {
+        color: #FF4757;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.6rem;
+        margin-top: 0.4rem;
+        display: block;
+    }
+} 

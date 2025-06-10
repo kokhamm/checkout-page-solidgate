@@ -1,0 +1,22 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    &__arrow-back{
+        padding: 0.8rem;
+    }
+    &__main-text{
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 3.2rem;
+    }
+    &__language-switch{
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        padding: 0.8rem;
+    }
+}
